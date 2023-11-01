@@ -6,7 +6,7 @@ import Footer from "./components/footer.jsx";
 import Inicio from "./components/header.jsx";
 import { BrowserRouter, Router, Route, Routes, Link } from "react-router-dom";
 import Middle from "./components/middle.jsx";
-// import Music from "./components/music";
+import Music from "./components/music";
 const GlobalCSS = createGlobalStyle`
 *{
   margin: 0;
@@ -55,7 +55,7 @@ const Background = styled.div`
 function App() {
   return (
     <>
-      {/* <Music /> */}
+      <Music />
       <Background />
       <GlobalCSS />
       <BrowserRouter>
