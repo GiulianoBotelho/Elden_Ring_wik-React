@@ -1,11 +1,11 @@
-import { useState } from 'react'
-import Gallery from './components/gallery.jsx'
-import backgroundImage from './assets/background.jpeg'
-import styled, { createGlobalStyle } from "styled-components"
-// import Footer from './components/footer.jsx'
-import Inicio from './components/header.jsx'
-import Main from './components/middle.jsx'
-import { BrowserRouter, Router, Route, Routes, Link } from 'react-router-dom'
+import { useState } from "react";
+import Gallery from "./components/gallery.jsx";
+import backgroundImage from "./assets/background.jpeg";
+import styled, { createGlobalStyle } from "styled-components";
+import Footer from "./components/footer.jsx";
+import Inicio from "./components/header.jsx";
+import { BrowserRouter, Router, Route, Routes, Link } from "react-router-dom";
+import Middle from "./components/middle.jsx";
 const GlobalCSS = createGlobalStyle`
 *{
   margin: 0;
@@ -17,23 +17,27 @@ const GlobalCSS = createGlobalStyle`
   /* Estilização da barra de rolagem */
   ::-webkit-scrollbar {
     width: 10px;
+    opacity:0;
   }
 
   ::-webkit-scrollbar-track {
     border-radius: 10px;
+    opacity:0;
   }
   
   ::-webkit-scrollbar-thumb {
     background: #916603; 
     border-radius: 10px;
+    opacity:0;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #000000; 
+   
+    opacity:0;
   }
 }
 
-`
+`;
 
 const Background = styled.div`
   position: fixed;
@@ -47,27 +51,27 @@ const Background = styled.div`
   z-index: -1;
 `;
 
-
-
 function App() {
-
   return (
     <>
-
-       <BrowserRouter>
+      <Background />
       <GlobalCSS />
-      <Background>
-        <Inicio/>
-     <Routes>
-      <Route path="/Main" element={<Main/>} />
-      <Route path='/' element={<Gallery/> }/>  
-      </Routes>
-        
-      </Background>
+      <BrowserRouter>
+        <Inicio />
+        {/* CABEÇALHO */}
+
+        {/* PRINCIPAL + CONTEUDO + ROTAS */}
+
+        <Routes>
+          <Route path="/" element={<Middle />} />
+          <Route path="/Gallery" element={<Gallery />} />
+        </Routes>
       </BrowserRouter>
 
+      {/* RODAPÉ */}
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
