@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import audioFile from "../assets/cutscene/main-sound.mp3";
 
 export default function Music() {
   const audio = useRef();
@@ -10,11 +11,7 @@ export default function Music() {
   return (
     <>
       <div>
-        <audio
-          ref={audio}
-          src=""
-          loop
-        />
+        <audio ref={audio} src={audioFile} loop />
       </div>
     </>
   );
