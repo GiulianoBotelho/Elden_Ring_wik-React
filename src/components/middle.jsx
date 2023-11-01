@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { motion, reverseEasing } from "framer-motion";
 
+import {useState, useRef, useEffect} from 'react';
+
 const Container = styled.main`
   height: 80vh;
   width: 100%;
