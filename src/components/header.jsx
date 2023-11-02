@@ -91,7 +91,8 @@ export default function Inicio() {
             <Li>
               <LinkStyle to="/Gallery">Boss</LinkStyle>
             </Li>
-            <Li>Maps</Li>
+            <Li><LinkStyle to="/Maps">Maps</LinkStyle></Li>
+            <Li>Castles</Li>
             <Li>Characters</Li>
           </Lista>
         </SideBar>

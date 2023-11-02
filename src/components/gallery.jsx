@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { AnimatePresence, motion } from "framer-motion";
-import margitImage from "../assets/margit.jpeg";
-import godrickImage from "../assets/godrick.jpeg";
-import rennalaImage from "../assets/rennala.jpeg";
-import radahnImage from "../assets/radahn.jpeg";
-import rykardImage from "../assets/rykard.jpeg";
-import moghTheOmen from "../assets/mogh_the_omen.jpeg";
-import godfreyGoldenShadeImage from "../assets/godfrey_golden_shade.jpeg";
-import morgottImage from "../assets/morgott.jpeg";
-import fireGiantImage from "../assets/fire_giant.jpeg";
-import dragonLordImage from "../assets/dragonlord_placidusax.jpeg";
-import malikethImage from "../assets/maliketh.jpeg";
-import moghBlood from "../assets/mohg_the_lord_of_blood.jpeg";
-import maleniaImage from "../assets/malenia.jpeg";
-import gideonImage from "../assets/gideon.jpeg";
-import hoarahLouxImage from "../assets/hoarah_loux.jpeg";
-import radagonImage from "../assets/radagon.jpeg";
-import eldenBeastImage from "../assets/elden_beast.jpeg";
+import margitImage from "../assets/boss/margit.jpeg";
+import godrickImage from "../assets//boss/godrick.jpeg";
+import rennalaImage from "../assets/boss/rennala.jpeg";
+import radahnImage from "../assets/boss/radahn.jpeg";
+import rykardImage from "../assets/boss/rykard.jpeg";
+import moghTheOmen from "../assets/boss/mogh_the_omen.jpeg";
+import godfreyGoldenShadeImage from "../assets/boss/godfrey_golden_shade.jpeg";
+import morgottImage from "../assets/boss/morgott.jpeg";
+import fireGiantImage from "../assets/boss/fire_giant.jpeg";
+import dragonLordImage from "../assets/boss/dragonlord_placidusax.jpeg";
+import malikethImage from "../assets/boss/maliketh.jpeg";
+import moghBlood from "../assets/boss/mohg_the_lord_of_blood.jpeg";
+import maleniaImage from "../assets/boss/malenia.jpg";
+import gideonImage from "../assets/boss/gideon.jpeg";
+import hoarahLouxImage from "../assets/boss/hoarah_loux.jpeg";
+import radagonImage from "../assets/boss/radagon.jpeg";
+import eldenBeastImage from "../assets/boss/elden_beast.jpeg";
 
 const Galeria = styled(motion.section)`
   display: flex;
@@ -29,22 +29,39 @@ const Galeria = styled(motion.section)`
   overflow: auto;
 `;
 const Imagem = styled.img`
-  width: 300px;
+  width: 350px;
   height: 200px;
   opacity: 1;
-  border: solid #a08002;
+
+    box-shadow:
+    0 0 20px black,
+    0 0 2px black,
+    0 0 2px black;
+    border: solid 3px black;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 25px;
+    &:hover{
+      border: solid #a08002;
   box-shadow:
     0 0 20px #a08000,
     0 0 2px #947703,
     0 0 2px white;
+    transition: 500ms;
+    }
+    
 `;
 const Titulo = styled.figcaption`
-  font-size: 2rem;
+  font-size: 1.8rem;
   border: solid #a08002;
+  background-color: black;
+  opacity: 0.9;
+  border-radius:13px;
   box-shadow:
     0 0 20px #a08000,
     0 0 2px #947703,
     0 0 2px white;
+    cursor:pointer;
 
   text-align: center;
   color: #a08002;
@@ -53,6 +70,12 @@ const Titulo = styled.figcaption`
     0 0 6px #947703,
     0 0 10px white;
   font-family: "Lancelot", serif;
+  &:hover{
+    transition: 500ms;
+    background-color: #a08002;
+    color: aliceblue;
+  }
+  
 `;
 
 const Figura = styled.figure`
@@ -63,6 +86,8 @@ const Figura = styled.figure`
   width: 400px;
   height: 280px;
   border: none;
+  object-fit: cover;
+ 
 `;
 
 export default function Gallery() {

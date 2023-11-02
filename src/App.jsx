@@ -1,11 +1,12 @@
 import { useState } from "react";
 import Gallery from "./components/gallery.jsx";
-import backgroundImage from "./assets/background.jpeg";
+import Background from "./assets/background/img2.jpg";
 import styled, { createGlobalStyle } from "styled-components";
 import Footer from "./components/footer.jsx";
 import Inicio from "./components/header.jsx";
 import { BrowserRouter, Router, Route, Routes, Link } from "react-router-dom";
 import Middle from "./components/middle.jsx";
+import Maps from './components/maps.jsx'
 const GlobalCSS = createGlobalStyle`
 *{
   margin: 0;
@@ -39,13 +40,13 @@ const GlobalCSS = createGlobalStyle`
 
 `;
 
-const Background = styled.div`
+const BackgroundMain = styled.div`
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(${backgroundImage});
+  background-image: url(${Background});
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
@@ -54,18 +55,22 @@ const Background = styled.div`
 function App() {
   return (
     <>
-      <Background />
+      <BackgroundMain />
       <GlobalCSS />
       <BrowserRouter>
         <Inicio />
         {/* CABEÇALHO */}
 
         {/* PRINCIPAL + CONTEUDO + ROTAS */}
-
+        <main>
         <Routes>
+       
           <Route path="/" element={<Middle />} />
+          <Route path="/Maps" element={<Maps/>} />
           <Route path="/Gallery" element={<Gallery />} />
+          
         </Routes>
+        </main>
       </BrowserRouter>
 
       {/* RODAPÉ */}

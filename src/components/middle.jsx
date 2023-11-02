@@ -18,6 +18,7 @@ const Intro = styled(motion.section)`
   font-size: 2rem;
   color: #a08002;
   width: 50%;
+  
 `;
 const TitleHome = styled.h1`
   color: aliceblue;
