@@ -52,7 +52,6 @@ const ButtonTrailer = styled(motion.button)`
 width:6vw;
 height:4vh;
 background-color: rgb(173, 110, 0);
-shadow-box: 1px 1px 1px 1px;
 border-radius: 20px;
 font-size:1rem;
 font-weight:500;
@@ -97,7 +96,7 @@ export default function Inicio() {
           </Lista>
         </SideBar>
 
-        
+  
           <ButtonTrailer
           onClick={playAudio}
           initial={{opacity:0.8, scale:1}}
@@ -114,3 +113,5 @@ export default function Inicio() {
     </>
   );
 }
+
+

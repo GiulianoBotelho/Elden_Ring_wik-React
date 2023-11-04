@@ -11,14 +11,15 @@ import godfreyGoldenShadeImage from "../assets/boss/godfrey_golden_shade.jpeg";
 import morgottImage from "../assets/boss/morgott.jpeg";
 import fireGiantImage from "../assets/boss/fire_giant.jpeg";
 import dragonLordImage from "../assets/boss/dragonlord_placidusax.jpeg";
+import godskinDuo from "../assets/boss/godskin.jpeg"
 import malikethImage from "../assets/boss/maliketh.jpeg";
 import moghBlood from "../assets/boss/mohg_the_lord_of_blood.jpeg";
-import maleniaImage from "../assets/boss/malenia.jpg";
+import maleniaImage from "../assets/boss/malenia.jpeg";
 import gideonImage from "../assets/boss/gideon.jpeg";
 import hoarahLouxImage from "../assets/boss/hoarah_loux.jpeg";
 import radagonImage from "../assets/boss/radagon.jpeg";
 import eldenBeastImage from "../assets/boss/elden_beast.jpeg";
-
+import { Link, Routes, BrowserRouter, Route } from "react-router-dom"
 const Galeria = styled(motion.section)`
   display: flex;
   height: 80%;
@@ -52,6 +53,7 @@ const Imagem = styled.img`
     
 `;
 const Titulo = styled.figcaption`
+font-family: 'Ringbearer';
   font-size: 1.8rem;
   border: solid #a08002;
   background-color: black;
@@ -87,50 +89,89 @@ const Figura = styled.figure`
   height: 280px;
   border: none;
   object-fit: cover;
- 
 `;
 
-export default function Gallery() {
+const Li = styled.li`
+  font-size: 1.3rem;
+  color: aliceblue;
+  cursor: pointer;
+  text-decoration: none;
+  transition:200ms;
+  &:hover {
+    color: #f9c906;
+    transition: 800ms;
+  }
+  &:active{
+    scale:1.25;
+    transition:600ms;
+    color:#f9c906;
+  }
+`;
+const SideBar = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+`;
+const Lista = styled.ul`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  gap: 20px;
+`;
+
+const LinkStyle = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
+
+export default function Boss() {
   const [boss, setBoss] = useState([
-    { imagem: margitImage, nome: "Margit, the Fell Omen" },
-    { imagem: godrickImage, nome: "Godrick, the grafted" },
-    { imagem: rennalaImage, nome: "Rennala, Queen of the full Moon" },
+    { imagem: margitImage, nome: "Margit, the Fell Omen", type: "mandatory" },
+    { imagem: godrickImage, nome: "Godrick, the grafted", type: "mandatory" },
+    { imagem: rennalaImage, nome: "Rennala, Queen of the full Moon", type: "mandatory" },
     { imagem: radahnImage, nome: "Starscourge Radahn" },
     { imagem: rykardImage, nome: "Rykard, Lord of Blasphemy" },
     { imagem: moghTheOmen, nome: "Mogh, the Omen" },
-    { imagem: godfreyGoldenShadeImage, nome: "Godfrey, Golden Shade" },
-    { imagem: morgottImage, nome: "Morgott, the Omen King" },
-    { imagem: fireGiantImage, nome: "Fire Giant" },
+    { imagem: godfreyGoldenShadeImage, nome: "Godfrey, Golden Shade", type: "mandatory" },
+    { imagem: morgottImage, nome: "Morgott, the Omen King", type: "mandatory" },
+    { imagem: fireGiantImage, nome: "Fire Giant", type: "mandatory" },
     { imagem: dragonLordImage, nome: "Dragon Lord, Placidusax" },
-    { imagem: malikethImage, nome: "Maliketh The Black Blade" },
+    { imagem: godskinDuo, nome: "Godskin Duo", type: "mandatory" },
+    { imagem: malikethImage, nome: "Maliketh The Black Blade", type: "mandatory" },
     { imagem: moghBlood, nome: "Mogh the Lord of Blood" },
     { imagem: maleniaImage, nome: "Malenia, blade of Miquella" },
-    { imagem: gideonImage, nome: "Sir Gideon Ofnir the All Knowing" },
-    { imagem: hoarahLouxImage, nome: "Hoarah Loux" },
-    { imagem: radagonImage, nome: "Radagon of the Golden Order" },
-    { imagem: eldenBeastImage, nome: "Elden Beast" },
+    { imagem: gideonImage, nome: "Sir Gideon Ofnir the All Knowing", type: "mandatory" },
+    { imagem: hoarahLouxImage, nome: "Hoarah Loux", type: "mandatory" },
+    { imagem: radagonImage, nome: "Radagon of the Golden Order", type: "mandatory" },
+    { imagem: eldenBeastImage, nome: "Elden Beast", type: "mandatory" },
   ]);
 
   return (
     <>
       <AnimatePresence>
-        <Galeria
-          initial={{ opacity: 0, x: -15 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-        >
-          {boss.map((item, index) => (
-            <ul>
-              <li key={index}>
-                <Figura>
-                  <Imagem src={item.imagem} alt={item.nome} />
-                  <Titulo>{item.nome}</Titulo>
-                </Figura>
-              </li>
-            </ul>
-          ))}
-        </Galeria>
+        <main>
+          <Galeria
+            initial={{ opacity: 0, x: -15 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
+            {boss.map((item) => (
+              <ul key={item.nome}>
+                <li>
+                  <Figura>
+                    <Imagem src={item.imagem} alt={item.nome} />
+                    <Titulo>{item.nome}</Titulo>
+                  </Figura>
+                </li>
+              </ul>
+            ))}
+          </Galeria>
+        </main>
       </AnimatePresence>
     </>
   );
 }
+
+

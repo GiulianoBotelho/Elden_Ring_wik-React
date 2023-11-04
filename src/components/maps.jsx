@@ -108,9 +108,9 @@ const [area, setArea] = useState([
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 1 }}
     >
-      {area.map((item, Index) => (
-        <ul>
-          <li key={Index}>
+      {area.map((item) => (
+        <ul key={item.nome}>
+          <li>
             <Figure>
               <Imagens src={item.Imagem} alt={item.nome} />
               <Titulo>{item.nome}</Titulo>

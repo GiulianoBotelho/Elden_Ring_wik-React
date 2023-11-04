@@ -7,12 +7,15 @@ import Inicio from "./components/header.jsx";
 import { BrowserRouter, Router, Route, Routes, Link } from "react-router-dom";
 import Middle from "./components/middle.jsx";
 import Maps from './components/maps.jsx'
+import RingbearerFont from './assets/fonts/RingbearerMedium.woff';
+import Boss from './components/gallery.jsx'
 const GlobalCSS = createGlobalStyle`
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  font-family: 'Ringbearer';
 
 
   /* Estilização da barra de rolagem */
@@ -38,6 +41,15 @@ const GlobalCSS = createGlobalStyle`
   }
 }
 
+
+
+  @font-face {
+    font-family: 'Ringbearer';
+    src: url(${RingbearerFont}) format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 `;
 
 const BackgroundMain = styled.div`
@@ -56,23 +68,21 @@ function App() {
   return (
     <>
       <BackgroundMain />
-      <GlobalCSS />
+      
       <BrowserRouter>
         <Inicio />
         {/* CABEÇALHO */}
 
         {/* PRINCIPAL + CONTEUDO + ROTAS */}
         <main>
+        <GlobalCSS />
         <Routes>
-       
-          <Route path="/" element={<Middle />} />
-          <Route path="/Maps" element={<Maps/>} />
-          <Route path="/Gallery" element={<Gallery />} />
-          
+        <Route path="/" element={<Middle />} />
+         <Route path="/Maps" element={<Maps/>} />
+         <Route path="/Gallery" element={<Boss/>}/>
         </Routes>
         </main>
       </BrowserRouter>
-
       {/* RODAPÉ */}
       <Footer />
     </>
