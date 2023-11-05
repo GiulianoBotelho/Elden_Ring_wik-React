@@ -1,26 +1,21 @@
-import React, { useState, useEffect } from "react";
-import styled, { createGlobalStyle } from "styled-components";
-import { AnimatePresence, motion } from "framer-motion";
+import React from 'react'
+import styled from 'styled-components'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import margitImage from "../assets/boss/margit.jpeg";
 import godrickImage from "../assets//boss/godrick.jpeg";
 import rennalaImage from "../assets/boss/rennala.jpeg";
-import radahnImage from "../assets/boss/radahn.jpeg";
-import rykardImage from "../assets/boss/rykard.jpeg";
-import moghTheOmen from "../assets/boss/mogh_the_omen.jpeg";
 import godfreyGoldenShadeImage from "../assets/boss/godfrey_golden_shade.jpeg";
 import morgottImage from "../assets/boss/morgott.jpeg";
 import fireGiantImage from "../assets/boss/fire_giant.jpeg";
-import dragonLordImage from "../assets/boss/dragonlord_placidusax.jpeg";
 import godskinDuo from "../assets/boss/godskin.jpeg"
 import malikethImage from "../assets/boss/maliketh.jpeg";
-import moghBlood from "../assets/boss/mohg_the_lord_of_blood.jpeg";
-import maleniaImage from "../assets/boss/malenia.jpeg";
 import gideonImage from "../assets/boss/gideon.jpeg";
 import hoarahLouxImage from "../assets/boss/hoarah_loux.jpeg";
 import radagonImage from "../assets/boss/radagon.jpeg";
 import eldenBeastImage from "../assets/boss/elden_beast.jpeg";
-import { Link, Routes, BrowserRouter, Route } from "react-router-dom"
-export const Galeria = styled(motion.section)`
+const Galeria = styled(motion.section)`
   display: flex;
   height: 80%;
   width: 98%;
@@ -29,7 +24,7 @@ export const Galeria = styled(motion.section)`
   gap: 15px;
   overflow: auto;
 `;
-export const Imagem = styled.img`
+const Imagem = styled.img`
   width: 350px;
   height: 200px;
   opacity: 1;
@@ -52,7 +47,7 @@ export const Imagem = styled.img`
     }
     
 `;
-export const Titulo = styled.figcaption`
+const Titulo = styled.figcaption`
 font-family: 'Ringbearer';
   font-size: 1.8rem;
   border: solid #a08002;
@@ -80,7 +75,7 @@ font-family: 'Ringbearer';
   
 `;
 
-export const Figura = styled.figure`
+const Figura = styled.figure`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,33 +120,30 @@ const LinkStyle = styled(Link)`
   color: inherit;
 `;
 
-export default function Boss() {
-  const [boss, setBoss] = useState([
-    { imagem: margitImage, nome: "Margit, the Fell Omen", type: "mandatory" },
-    { imagem: godrickImage, nome: "Godrick, the grafted", type: "mandatory" },
-    { imagem: rennalaImage, nome: "Rennala, Queen of the full Moon", type: "mandatory" },
-    { imagem: radahnImage, nome: "Starscourge Radahn" },
-    { imagem: rykardImage, nome: "Rykard, Lord of Blasphemy" },
-    { imagem: moghTheOmen, nome: "Mogh, the Omen" },
-    { imagem: godfreyGoldenShadeImage, nome: "Godfrey, Golden Shade", type: "mandatory" },
-    { imagem: morgottImage, nome: "Morgott, the Omen King", type: "mandatory" },
-    { imagem: fireGiantImage, nome: "Fire Giant", type: "mandatory" },
-    { imagem: dragonLordImage, nome: "Dragon Lord, Placidusax" },
-    { imagem: godskinDuo, nome: "Godskin Duo", type: "mandatory" },
-    { imagem: malikethImage, nome: "Maliketh The Black Blade", type: "mandatory" },
-    { imagem: moghBlood, nome: "Mogh the Lord of Blood" },
-    { imagem: maleniaImage, nome: "Malenia, blade of Miquella" },
-    { imagem: gideonImage, nome: "Sir Gideon Ofnir the All Knowing", type: "mandatory" },
-    { imagem: hoarahLouxImage, nome: "Hoarah Loux", type: "mandatory" },
-    { imagem: radagonImage, nome: "Radagon of the Golden Order", type: "mandatory" },
-    { imagem: eldenBeastImage, nome: "Elden Beast", type: "mandatory" },
-  ]);
 
-  return (
-    <>
-      <AnimatePresence>
-        <main>
-        <SideBar>
+export default function Mainboss() {
+    const[principal,setPrincipal] = useState  
+    ([ { imagem: margitImage, nome: "Margit, the Fell Omen" },
+    { imagem: godrickImage, nome: "Godrick, the grafted" },
+    { imagem: rennalaImage, nome: "Rennala, Queen of the full Moon" },
+    { imagem: godfreyGoldenShadeImage, nome: "Godfrey, Golden Shade" },
+    { imagem: morgottImage, nome: "Morgott, the Omen King" },
+    { imagem: fireGiantImage, nome: "Fire Giant" },
+    { imagem: godskinDuo, nome: "Godskin Duo" },
+    { imagem: malikethImage, nome: "Maliketh The Black Blade" },
+    { imagem: gideonImage, nome: "Sir Gideon Ofnir the All Knowing" },
+    { imagem: hoarahLouxImage, nome: "Hoarah Loux" },
+    { imagem: radagonImage, nome: "Radagon of the Golden Order" },
+    { imagem: eldenBeastImage, nome: "Elden Beast" },
+])
+
+   
+    return (
+
+        <>
+            <main>
+          
+            <SideBar>
           <Lista>
             <Li>
               <LinkStyle to="/Gallery">All</LinkStyle>
@@ -159,12 +151,12 @@ export default function Boss() {
             <Li><LinkStyle to="/MainBoss">Mandatory</LinkStyle></Li>
           </Lista>
         </SideBar>
-          <Galeria
+            <Galeria
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
           >
-            {boss.map((item) => (
+            {principal.map((item) => (
               <ul key={item.nome}>
                 <li>
                   <Figura>
@@ -174,9 +166,9 @@ export default function Boss() {
                 </li>
               </ul>
             ))}
+
           </Galeria>
-        </main>
-      </AnimatePresence>
-    </>
-  );
+            </main>
+        </>
+    )
 }

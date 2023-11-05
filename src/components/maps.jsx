@@ -83,9 +83,6 @@ const Figure = styled.figure`
  
 `;
 
-
-
-
 export default function Maps() {
     
 const [area, setArea] = useState([

@@ -9,6 +9,8 @@ import Middle from "./components/middle.jsx";
 import Maps from './components/maps.jsx'
 import RingbearerFont from './assets/fonts/RingbearerMedium.woff';
 import Boss from './components/gallery.jsx'
+import Mainboss from "./components/mainboss.jsx";
+import Castles from "./components/castles.jsx";
 const GlobalCSS = createGlobalStyle`
 *{
   margin: 0;
@@ -41,8 +43,6 @@ const GlobalCSS = createGlobalStyle`
   }
 }
 
-
-
   @font-face {
     font-family: 'Ringbearer';
     src: url(${RingbearerFont}) format('woff');
@@ -64,6 +64,8 @@ const BackgroundMain = styled.div`
   z-index: -1;
 `;
 
+
+
 function App() {
   return (
     <>
@@ -75,11 +77,14 @@ function App() {
 
         {/* PRINCIPAL + CONTEUDO + ROTAS */}
         <main>
+      
         <GlobalCSS />
         <Routes>
         <Route path="/" element={<Middle />} />
          <Route path="/Maps" element={<Maps/>} />
          <Route path="/Gallery" element={<Boss/>}/>
+         <Route path="/MainBoss" element={<Mainboss/>}/>
+         <Route path="/Castles" element={<Castles/>}/>
         </Routes>
         </main>
       </BrowserRouter>
