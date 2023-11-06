@@ -101,7 +101,7 @@ const [area, setArea] = useState([
   return (
     <AnimatePresence>
     <Mapas
-      initial={{ opacity: 0, x: -15 }}
+      initial={{ opacity: 0, x: 15}}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 1 }}
     >

@@ -2,14 +2,15 @@ import React, { useState,useRef,useEffect  } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import {motion} from 'framer-motion';
-import audioFile from "../assets/cutscene/main-soundtrack.mp3";
+
+import logo from '../assets/background/ER.png'
 const LinkStyle = styled(Link)`
   text-decoration: none;
   color: inherit;
 `;
 
 const Cabeçalho = styled.header`
-  height: 11vh;
+  height: 18vh;
   width: 100%;
   background-color: black;
   opacity: 0.5;
@@ -48,40 +49,27 @@ const Lista = styled.ul`
   gap: 20px;
 `;
 
-const ButtonTrailer = styled(motion.button)`
-width:6vw;
-height:4vh;
-background-color: rgb(173, 110, 0);
-border-radius: 20px;
-font-size:1rem;
-font-weight:500;
-cursor:pointer;
-border:none;
-opacity:1;
-&:active{
-  scale:1.1;
-  background-color:#a08002;
-  box-shadow:
-    0 0 5px rgb(173, 110, 0),
-    0 0 6px rgb(173, 110, 0),
-    0 0 10px white;
-    transition: 100ms;
+const Logo = styled(motion.img) `
+width: 65%;
 
-}
 `
+
+
 export default function Inicio() {
-  const audio = useRef();
-  useEffect(() => {
-    audio.current.volume = 0.5;
-  }, []);
-  
-  const playAudio = () =>{
-   audio.current.play();
-  }
-  
+
   return (
     <>
       <Cabeçalho>
+      <figure>
+        <Logo
+        initial={{opacity:0.6, scale:1}}
+        animate={{opacity:1}}
+        transition={{
+          repeat:Infinity,
+          repeatType:'reverse',
+          duration:3, delay:5 }}
+         src={logo} alt="Logo escrito Elden Ring" />
+      </figure>
         <SideBar>
           <Lista>
             <Li>
@@ -92,23 +80,12 @@ export default function Inicio() {
             </Li>
             <Li><LinkStyle to="/Maps">Maps</LinkStyle></Li>
             <Li><LinkStyle to="/Castles">Castles</LinkStyle></Li>
-            <Li>Characters</Li>
+            <Li><LinkStyle to="/Char">Characters</LinkStyle></Li>
           </Lista>
         </SideBar>
 
   
-          <ButtonTrailer
-          onClick={playAudio}
-          initial={{opacity:0.8, scale:1}}
-          animate={{opacity:1, scale:1.08}}
-          transition={{
-            repeat:Infinity,
-            repeatType:'reverse',
-            duration:1
-          }}
-          
-          >Play Intro</ButtonTrailer>
-            <audio ref={audio} src={audioFile} loop />
+        
       </Cabeçalho>
     </>
   );

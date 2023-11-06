@@ -11,6 +11,7 @@ import RingbearerFont from './assets/fonts/RingbearerMedium.woff';
 import Boss from './components/gallery.jsx'
 import Mainboss from "./components/mainboss.jsx";
 import Castles from "./components/castles.jsx";
+import Characters from "./components/characters.jsx";
 const GlobalCSS = createGlobalStyle`
 *{
   margin: 0;
@@ -85,6 +86,7 @@ function App() {
          <Route path="/Gallery" element={<Boss/>}/>
          <Route path="/MainBoss" element={<Mainboss/>}/>
          <Route path="/Castles" element={<Castles/>}/>
+         <Route path="/Char" element={<Characters/>}/>
         </Routes>
         </main>
       </BrowserRouter>
