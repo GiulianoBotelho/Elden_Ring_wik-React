@@ -1,5 +1,3 @@
-import { useState } from "react";
-import Gallery from "./components/gallery.jsx";
 import Background from "./assets/background/img2.jpg";
 import styled, { createGlobalStyle } from "styled-components";
 import Footer from "./components/footer.jsx";
@@ -8,7 +6,6 @@ import { BrowserRouter, Router, Route, Routes, Link } from "react-router-dom";
 import Maps from './components/maps.jsx'
 import RingbearerFont from './assets/fonts/RingbearerMedium.woff';
 import Boss from './components/gallery.jsx'
-import Mainboss from "./components/mainboss.jsx";
 import Castles from "./components/castles.jsx";
 import Characters from "./components/characters.jsx";
 import Home from "./components/home.jsx";
@@ -86,7 +83,6 @@ function App() {
         <Route path="/Home" element={<Home />} />
          <Route path="/Maps" element={<Maps/>} />
          <Route path="/Gallery" element={<Boss/>}/>
-         <Route path="/MainBoss" element={<Mainboss/>}/>
          <Route path="/Castles" element={<Castles/>}/>
          <Route path="/Char" element={<Characters/>}/>
        

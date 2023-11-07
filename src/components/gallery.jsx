@@ -45,13 +45,12 @@ export const Galeria = styled(motion.section)`
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 15px;
-  overflow: auto;
 `;
 export const Imagem = styled.img`
   width: 350px;
   height: 200px;
   opacity: 1;
-
+  
     box-shadow:
     0 0 20px black,
     0 0 2px black,
@@ -99,6 +98,7 @@ font-family: 'Ringbearer';
 `;
 
 export const Figura = styled.figure`
+transition:800ms;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,6 +107,10 @@ export const Figura = styled.figure`
   height: 280px;
   border: none;
   object-fit: cover;
+  &:hover{
+    scale:1.1;
+    transition:1200ms;
+  }
 `;
 const Li = styled.li`
   font-size: 1.3rem;
@@ -197,14 +201,14 @@ const Click = (item) =>{
     <Modal isOpen={isOpen} setIsOpen={setIsOpen} selectedImage={selectedImage} />
       <AnimatePresence>
         <main>
-        <SideBar>
+        {/* <SideBar>
           <Lista>
             <Li>
               <LinkStyle to="/Gallery">All</LinkStyle>
             </Li>
             <Li><LinkStyle to="/MainBoss">Mandatory</LinkStyle></Li>
           </Lista>
-        </SideBar>
+        </SideBar> */}
           <Galeria
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}

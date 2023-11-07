@@ -11,7 +11,7 @@ const LinkStyle = styled(Link)`
 `;
 
 const Cabeçalho = styled.header`
-z-index: 1;
+  z-index: 1;
   height: 12vh;
   width: 100%;
   opacity: 0.5;

@@ -10,7 +10,6 @@ import sun from '../assets/castle/sun.jpeg'
 import { Figura } from './gallery'
 import { Imagem } from './gallery'
 import { Titulo } from './gallery'
-import {motion} from 'framer-motion'
 import { Galeria } from './gallery'
 
 export default function Castles() {

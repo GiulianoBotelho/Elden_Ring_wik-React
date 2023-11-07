@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import Modal from "./modal.jsx";
 
 const Rodape = styled.footer`
+  z-index: 1;
   display: flex;
   height: 6vh;
   width: 100%;
@@ -14,6 +15,7 @@ const Rodape = styled.footer`
 `;
 
 const FigLogo = styled.figure`
+
 display: flex;
 justify-content: space-evenly;
 align-items: center;
@@ -36,7 +38,7 @@ export default function Footer() {
                   duration: 2,
                   ease: "easeInOut",
                   repeat: Infinity,
-                  repeatDelay: 10
+                  repeatDelay: 3,
                 }}
                 src={linkedin} alt="Logo linkedin" />
             </a>
@@ -48,7 +50,7 @@ export default function Footer() {
                   duration: 2,
                   ease: "easeInOut",
                   repeat: Infinity,
-                  repeatDelay: 10
+                  repeatDelay: 3,
                 }} src={github} alt="Logo github" />
                       </a> 
           </FigLogo>

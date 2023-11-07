@@ -19,7 +19,6 @@ const Mapas = styled(motion.section)`
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 15px;
-  overflow: auto;
 `;
 const Imagens = styled.img`
   width: 350px;
@@ -72,6 +71,7 @@ const Titulo = styled.figcaption`
 `;
 
 const Figure = styled.figure`
+transition: 800ms;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,6 +80,10 @@ const Figure = styled.figure`
   height: 280px;
   border: none;
   object-fit: cover;
+  &:hover{
+    scale:1.05;
+    transition:1200ms;
+  }
  
 `;
 
