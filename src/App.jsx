@@ -68,6 +68,7 @@ const BackgroundMain = styled.div`
 
 
 
+
 function App() {
   return (
     <>
@@ -76,6 +77,7 @@ function App() {
         <GlobalCSS />
       <BrowserRouter>
         <Inicio />
+        
         {/* CABEÇALHO */}
 
         {/* PRINCIPAL + CONTEUDO + ROTAS */}

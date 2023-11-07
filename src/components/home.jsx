@@ -47,6 +47,7 @@ export default function Home() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
             >
+               
                 <CorTitulo>
                     <TitleHome
                         initial={{ opacity: 0, x: -100 }}

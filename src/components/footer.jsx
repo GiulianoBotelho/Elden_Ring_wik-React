@@ -3,6 +3,7 @@ import styled from "styled-components";
 import linkedin from '../assets/background/linkedin.png'
 import github from '../assets/background/github.png'
 import { motion } from 'framer-motion'
+import Modal from "./modal.jsx";
 
 const Rodape = styled.footer`
   display: flex;
@@ -25,6 +26,7 @@ export default function Footer() {
     <>
       <Rodape>
         <nav>
+        <Modal/>
           <FigLogo>
             <a href="https://www.linkedin.com/in/giuliano-botelho/" target="_blank">
               <motion.img

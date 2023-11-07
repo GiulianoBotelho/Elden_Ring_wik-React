@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import {motion} from 'framer-motion';
 
+
 import logo from '../assets/background/ER.png'
 const LinkStyle = styled(Link)`
   text-decoration: none;
