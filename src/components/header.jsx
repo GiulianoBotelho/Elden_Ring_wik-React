@@ -1,7 +1,7 @@
-import React, { useState,useRef,useEffect  } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 
 import logo from '../assets/background/ER.png'
@@ -50,7 +50,7 @@ const Lista = styled.ul`
   gap: 20px;
 `;
 
-const Logo = styled(motion.img) `
+const Logo = styled(motion.img)`
 width: 65%;
 
 `
@@ -60,16 +60,17 @@ export default function Inicio() {
   return (
     <>
       <Cabeçalho>
-      <figure>
-        <Logo
-        initial={{opacity:0.6, scale:1}}
-        animate={{opacity:1}}
-        transition={{
-          repeat:Infinity,
-          repeatType:'reverse',
-          duration:3, delay:5 }}
-         src={logo} alt="Logo escrito Elden Ring" />
-      </figure>
+        <figure>
+          <Logo
+            initial={{ opacity: 0.6, scale: 1 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              repeat: Infinity,
+              repeatType: 'reverse',
+              duration: 3, delay: 5
+            }}
+            src={logo} alt="Logo escrito Elden Ring" />
+        </figure>
         <SideBar>
           <Lista>
             <Li>
@@ -84,8 +85,8 @@ export default function Inicio() {
           </Lista>
         </SideBar>
 
-  
-        
+
+
       </Cabeçalho>
     </>
   );

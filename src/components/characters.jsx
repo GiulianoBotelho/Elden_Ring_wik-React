@@ -15,7 +15,7 @@ import { Titulo } from './gallery'
 import { Galeria } from './gallery'
 
 
-const Imagem = styled.img `
+const Imagem = styled.img`
  opacity: 1;
 
 box-shadow:
@@ -45,40 +45,40 @@ const Figura = styled.figure`
   border: none;
   object-fit: cover;
 `;
-    
+
 
 export default function Characters() {
-    const [char, setChar] = useState
+  const [char, setChar] = useState
     ([
-        {imagem:astrologer, nome: "Astrologer"},
-        {imagem:bandit, nome: "Bandit"},
-        {imagem:confessor, nome: "Confessor"},
-        {imagem:hero, nome: "Hero"},
-        {imagem:prisioner, nome: "Prisioner"},
-        {imagem:prophet, nome: "Prophet"},
-        {imagem:samurai, nome: "Samurai"},
-        {imagem:vagabond, nome: "Vagabond"},
-        {imagem:warrior, nome: "Warrior"},
-        {imagem:wretch, nome: "Wretch"},
+      { imagem: astrologer, nome: "Astrologer" },
+      { imagem: bandit, nome: "Bandit" },
+      { imagem: confessor, nome: "Confessor" },
+      { imagem: hero, nome: "Hero" },
+      { imagem: prisioner, nome: "Prisioner" },
+      { imagem: prophet, nome: "Prophet" },
+      { imagem: samurai, nome: "Samurai" },
+      { imagem: vagabond, nome: "Vagabond" },
+      { imagem: warrior, nome: "Warrior" },
+      { imagem: wretch, nome: "Wretch" },
     ])
   return (
     <>
-    <Galeria
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
-          >
-            {char.map((item) => (
-              <ul key={item.nome}>
-                <li>
-                  <Figura>
-                    <Imagem src={item.imagem} alt={item.nome} />
-                    <Titulo>{item.nome}</Titulo>
-                  </Figura>
-                </li>
-              </ul>
-            ))}
-          </Galeria>
+      <Galeria
+        initial={{ opacity: 0, x: -10 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+      >
+        {char.map((item) => (
+          <ul key={item.nome}>
+            <li>
+              <Figura>
+                <Imagem src={item.imagem} alt={item.nome} />
+                <Titulo>{item.nome}</Titulo>
+              </Figura>
+            </li>
+          </ul>
+        ))}
+      </Galeria>
     </>
   )
 }

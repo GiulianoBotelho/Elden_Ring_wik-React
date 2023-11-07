@@ -70,27 +70,27 @@ function App() {
   return (
     <>
       <BackgroundMain />
-      
-        <GlobalCSS />
+
+      <GlobalCSS />
       <BrowserRouter>
         <Inicio />
-        
+
         {/* CABEÇALHO */}
 
         {/* PRINCIPAL + CONTEUDO + ROTAS */}
-        
+
         <Routes>
-        <Route path="/Home" element={<Home />} />
-         <Route path="/Maps" element={<Maps/>} />
-         <Route path="/Gallery" element={<Boss/>}/>
-         <Route path="/Castles" element={<Castles/>}/>
-         <Route path="/Char" element={<Characters/>}/>
-       
+          <Route path="/Home" element={<Home />} />
+          <Route path="/Maps" element={<Maps />} />
+          <Route path="/Gallery" element={<Boss />} />
+          <Route path="/Castles" element={<Castles />} />
+          <Route path="/Char" element={<Characters />} />
+
         </Routes>
       </BrowserRouter>
       {/* RODAPÉ */}
       {/* <Footer /> */}
-      <Footer/>
+      <Footer />
     </>
   );
 }

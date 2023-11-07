@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {motion, AnimatePresence} from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import styled from 'styled-components'
 import Limgrave from '../assets/maps/Limgrave.jpg'
 import Liurnia from '../assets/maps/Liurnia.jpeg'
@@ -24,7 +24,6 @@ const Imagens = styled.img`
   width: 350px;
   height: 200px;
   opacity: 1;
-
     box-shadow:
     0 0 20px black,
     0 0 2px black,
@@ -44,23 +43,18 @@ const Imagens = styled.img`
     
 `;
 const Titulo = styled.figcaption`
-  font-size: 1.8rem;
-  border: solid #a08002;
+  font-family: 'Ringbearer';
+  font-size: 1.6rem;
   background-color: black;
   opacity: 0.9;
-  border-radius:13px;
+  border-radius:10px;
   box-shadow:
     0 0 20px #a08000,
     0 0 2px #947703,
     0 0 2px white;
     cursor:pointer;
-
   text-align: center;
   color: #a08002;
-  text-shadow:
-    0 0 5px #a08000,
-    0 0 6px #947703,
-    0 0 10px white;
   font-family: "Lancelot", serif;
   &:hover{
     transition: 500ms;
@@ -68,7 +62,7 @@ const Titulo = styled.figcaption`
     color: aliceblue;
   }
   
-`;
+`
 
 const Figure = styled.figure`
 transition: 800ms;
@@ -88,38 +82,38 @@ transition: 800ms;
 `;
 
 export default function Maps() {
-    
-const [area, setArea] = useState([
-    {Imagem: Limgrave,   nome: "Limgrave"},
-    {Imagem:Liurnia, nome: "Liurnia of Lakes"  },
-    {Imagem: Caelid, nome:"Caelid"},
-    {Imagem: Plato, nome:"Platô Altus"},
-    {Imagem: Gelmir, nome: "Gelmir Mountain"},
-    {Imagem: SnowMap, nome:"Mountain Giants"},
-    {Imagem: Azula, nome: "Farum Azula"},
-    {Imagem: MiquelaTree, nome:"Elphael, brace of the Haligtree"},
-    {Imagem: Nokron, nome: "Nokron, Eternal City"},
 
-])
+  const [area, setArea] = useState([
+    { Imagem: Limgrave, nome: "Limgrave" },
+    { Imagem: Liurnia, nome: "Liurnia of Lakes" },
+    { Imagem: Caelid, nome: "Caelid" },
+    { Imagem: Plato, nome: "Platô Altus" },
+    { Imagem: Gelmir, nome: "Gelmir Mountain" },
+    { Imagem: SnowMap, nome: "Mountain Giants" },
+    { Imagem: Azula, nome: "Farum Azula" },
+    { Imagem: MiquelaTree, nome: "Elphael, brace of the Haligtree" },
+    { Imagem: Nokron, nome: "Nokron, Eternal City" },
+
+  ])
 
   return (
     <AnimatePresence>
-    <Mapas
-      initial={{ opacity: 0, x: 15}}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1 }}
-    >
-      {area.map((item) => (
-        <ul key={item.nome}>
-          <li>
-            <Figure>
-              <Imagens src={item.Imagem} alt={item.nome} />
-              <Titulo>{item.nome}</Titulo>
-            </Figure>
-          </li>
-        </ul>
-      ))}
-    </Mapas>
-  </AnimatePresence>
+      <Mapas
+        initial={{ opacity: 0, x: 15 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+      >
+        {area.map((item) => (
+          <ul key={item.nome}>
+            <li>
+              <Figure>
+                <Imagens src={item.Imagem} alt={item.nome} />
+                <Titulo>{item.nome}</Titulo>
+              </Figure>
+            </li>
+          </ul>
+        ))}
+      </Mapas>
+    </AnimatePresence>
   )
 }

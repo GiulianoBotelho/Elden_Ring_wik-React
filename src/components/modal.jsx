@@ -35,14 +35,12 @@ const Div = styled(motion.div)`
     align-items: center;
     flex-direction: column;
 `
-
-const Descricao = styled(motion.p)`
+const Descricao = styled(motion.article)`
 color:aliceblue;
 text-align: center;
 display: flex;
 flex-direction: column;
 `
-
 const Botao = styled.button`
 margin-left: 76%;
 width: 4vw;
@@ -69,31 +67,28 @@ export default function Modal({ isOpen, setIsOpen, selectedImage }) {
       >
         <Botao onClick={() => setIsOpen(false)}>Fechar</Botao>
         <Artigo
-        initial={{ opacity: 0, x:-1000 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }}
-        
+          initial={{ opacity: 0, x: -1000 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
         >
           <video width="800" height="600" controls autoPlay>
             <source src={selectedImage.video} type="video/mp4" />
           </video>
           <Descricao
-
-          initial={{opacity:0}}
-          animate={{opacity:1}}
-          transition={{duration:2, delay:2}}
-          
-          ><ModalTitulo initial={{opacity:0.1, scale:1.1}}
-          animate={{opacity:1, }}
-          transition={{
-            repeat:Infinity,
-            repeatType:'reverse',
-            duration:3 }}
-  
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2, delay: 2 }}
+          ><ModalTitulo initial={{ opacity: 0.1, scale: 1.1 }}
+            animate={{ opacity: 1, }}
+            transition={{
+              repeat: Infinity,
+              repeatType: 'reverse',
+              duration: 3
+            }}
           >{selectedImage.nome}</ModalTitulo>
             {selectedImage.descricao}</Descricao>
         </Artigo>
-        
+
       </Div>
     </>
   )
