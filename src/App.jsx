@@ -5,13 +5,13 @@ import styled, { createGlobalStyle } from "styled-components";
 import Footer from "./components/footer.jsx";
 import Inicio from "./components/header.jsx";
 import { BrowserRouter, Router, Route, Routes, Link } from "react-router-dom";
-import Middle from "./components/middle.jsx";
 import Maps from './components/maps.jsx'
 import RingbearerFont from './assets/fonts/RingbearerMedium.woff';
 import Boss from './components/gallery.jsx'
 import Mainboss from "./components/mainboss.jsx";
 import Castles from "./components/castles.jsx";
 import Characters from "./components/characters.jsx";
+import Home from "./components/home.jsx";
 const GlobalCSS = createGlobalStyle`
 *{
   margin: 0;
@@ -25,22 +25,23 @@ const GlobalCSS = createGlobalStyle`
   ::-webkit-scrollbar {
     width: 10px;
     opacity:0;
+    background-color: black;
+    
   }
 
   ::-webkit-scrollbar-track {
     border-radius: 10px;
-    opacity:0;
+   
   }
   
-  ::-webkit-scrollbar-thumb {
-    background: #916603; 
+  ::-webkit-scrollbar-thumb { 
     border-radius: 10px;
-    opacity:0;
+    background-color: black;
+    opacity: 0;
+    border: solid #916603;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-   
-    opacity:0;
   }
 }
 
@@ -72,26 +73,26 @@ function App() {
     <>
       <BackgroundMain />
       
+        <GlobalCSS />
       <BrowserRouter>
         <Inicio />
         {/* CABEÇALHO */}
 
         {/* PRINCIPAL + CONTEUDO + ROTAS */}
-        <main>
-      
-        <GlobalCSS />
+        
         <Routes>
-        <Route path="/" element={<Middle />} />
+        <Route path="/Home" element={<Home />} />
          <Route path="/Maps" element={<Maps/>} />
          <Route path="/Gallery" element={<Boss/>}/>
          <Route path="/MainBoss" element={<Mainboss/>}/>
          <Route path="/Castles" element={<Castles/>}/>
          <Route path="/Char" element={<Characters/>}/>
+       
         </Routes>
-        </main>
       </BrowserRouter>
       {/* RODAPÉ */}
-      <Footer />
+      {/* <Footer /> */}
+      <Footer/>
     </>
   );
 }

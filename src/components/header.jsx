@@ -10,9 +10,9 @@ const LinkStyle = styled(Link)`
 `;
 
 const Cabeçalho = styled.header`
-  height: 18vh;
+z-index: 1;
+  height: 12vh;
   width: 100%;
-  background-color: black;
   opacity: 0.5;
   border: none;
   display:flex;
@@ -54,7 +54,6 @@ width: 65%;
 
 `
 
-
 export default function Inicio() {
 
   return (
@@ -73,7 +72,7 @@ export default function Inicio() {
         <SideBar>
           <Lista>
             <Li>
-              <LinkStyle to="/">Home</LinkStyle>
+              <LinkStyle to="/Home">Home</LinkStyle>
             </Li>
             <Li>
               <LinkStyle to="/Gallery">Boss</LinkStyle>
