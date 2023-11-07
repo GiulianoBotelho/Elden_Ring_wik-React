@@ -21,7 +21,7 @@ import radagonImage from "../assets/boss/radagon.jpeg";
 import eldenBeastImage from "../assets/boss/elden_beast.jpeg";
 import { Link, Routes, BrowserRouter, Route } from "react-router-dom"
 import Modal from "./modal.jsx";
-import videomargit from '../assets/cutscene/margit.mp4'
+import videomargit from '../assets/cutscene/Margit.mp4'
 import videogodrick from '../assets/cutscene/godrick.mp4'
 import videorennala from '../assets/cutscene/Rennala.mp4'
 import videoradahn from '../assets/cutscene/Radahn.mp4'
