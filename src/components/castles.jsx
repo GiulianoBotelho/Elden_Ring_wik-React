@@ -7,10 +7,10 @@ import redmane from '../assets/castle/redmane.jpeg'
 import volcano from '../assets/castle/volcano.jpeg'
 import leyendell from '../assets/castle/leyendell.jpeg'
 import sun from '../assets/castle/sun.jpeg'
-import { Figura } from './gallery'
-import { Imagem } from './gallery'
-import { Titulo } from './gallery'
-import { Galeria } from './gallery'
+import { Figura } from './Style-page/style.jsx'
+import { Imagem } from './Style-page/style.jsx'
+import { Titulo } from './Style-page/style.jsx'
+import { Galeria } from './Style-page/style.jsx'
 
 export default function Castles() {
 const[castle,setCastle] = useState

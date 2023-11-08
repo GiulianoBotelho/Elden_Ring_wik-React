@@ -4,52 +4,11 @@ import Footer from "./components/footer.jsx";
 import Inicio from "./components/header.jsx";
 import { BrowserRouter, Router, Route, Routes, Link } from "react-router-dom";
 import Maps from './components/maps.jsx'
-import RingbearerFont from './assets/fonts/RingbearerMedium.woff';
-import Boss from './components/gallery.jsx'
+import Boss from './components/boss.jsx'
 import Castles from "./components/castles.jsx";
 import Characters from "./components/characters.jsx";
 import Home from "./components/home.jsx";
-const GlobalCSS = createGlobalStyle`
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  font-family: 'Ringbearer';
-
-
-  /* Estilização da barra de rolagem */
-  ::-webkit-scrollbar {
-    width: 10px;
-    opacity:0;
-    background-color: black;
-    
-  }
-
-  ::-webkit-scrollbar-track {
-    border-radius: 10px;
-   
-  }
-  
-  ::-webkit-scrollbar-thumb { 
-    border-radius: 10px;
-    background-color: black;
-    opacity: 0;
-    border: solid #916603;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-  }
-}
-
-  @font-face {
-    font-family: 'Ringbearer';
-    src: url(${RingbearerFont}) format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-`;
+import { GlobalCSS } from "./components/Style-page/style.jsx";
 
 const BackgroundMain = styled.div`
   position: fixed;

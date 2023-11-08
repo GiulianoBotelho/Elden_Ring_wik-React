@@ -4,24 +4,8 @@ import linkedin from '../assets/background/linkedin.png'
 import github from '../assets/background/github.png'
 import { motion } from 'framer-motion'
 import Modal from "./modal.jsx";
-
-const Rodape = styled.footer`
-  z-index: 1;
-  display: flex;
-  height: 6vh;
-  width: 100%;
-  justify-content: flex-end;
-  color: 0.2px #a08002;
-`;
-
-const FigLogo = styled.figure`
-
-display: flex;
-justify-content: space-evenly;
-align-items: center;
-width: 10vw;
-cursor: pointer;
-`
+import { Rodape } from "./Style-page/style.jsx";
+import { FigLogo } from "./Style-page/style.jsx";
 
 export default function Footer() {
   return (

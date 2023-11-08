@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import styled from 'styled-components'
 import astrologer from '../assets/characters/Astrologer.jpeg'
 import bandit from '../assets/characters/bandit.jpeg'
 import confessor from '../assets/characters/confessor.jpeg'
@@ -11,41 +9,10 @@ import samurai from '../assets/characters/samurai.jpeg'
 import vagabond from '../assets/characters/vagabond.jpeg'
 import warrior from '../assets/characters/Warrior.jpeg'
 import wretch from '../assets/characters/wretch.jpeg'
-import { Titulo } from './gallery'
-import { Galeria } from './gallery'
-
-
-const Imagem = styled.img`
- opacity: 1;
-
-box-shadow:
-0 0 20px black,
-0 0 2px black,
-0 0 2px black;
-border: solid 3px black;
-object-fit: cover;
-cursor: pointer;
-border-radius: 25px;
-&:hover{
-  border: solid #a08002;
-box-shadow:
-0 0 20px #a08000,
-0 0 2px #947703,
-0 0 2px white;
-transition: 500ms;
-}
-`
-const Figura = styled.figure`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 280px;
-  height: 400px;
-  border: none;
-  object-fit: cover;
-`;
-
+import { Titulo } from './Style-page/style.jsx'
+import { Galeria } from './Style-page/style.jsx'
+import { FigChar } from './Style-page/style.jsx'
+import { ImgChar } from './Style-page/style.jsx'
 
 export default function Characters() {
   const [char, setChar] = useState
@@ -71,10 +38,10 @@ export default function Characters() {
         {char.map((item) => (
           <ul key={item.nome}>
             <li>
-              <Figura>
-                <Imagem src={item.imagem} alt={item.nome} />
+              <FigChar>
+                <ImgChar src={item.imagem} alt={item.nome} />
                 <Titulo>{item.nome}</Titulo>
-              </Figura>
+              </FigChar>
             </li>
           </ul>
         ))}
