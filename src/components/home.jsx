@@ -1,8 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import styled from 'styled-components';
-
-const Intro = styled(motion.section)`
+export const Intro = styled(motion.section)`
   font-size: 1.5rem;
   width: 100%;
   background-color: rgb(0,0,0 0.8);
@@ -11,9 +10,10 @@ const Intro = styled(motion.section)`
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
+
 `;
 
-const TitleHome = styled(motion.h1)`
+export const TitleHome = styled(motion.h1)`
   color: aliceblue;
   box-shadow: 1px, 1px, 1px, 1px;
   width: 100%;
@@ -21,7 +21,7 @@ const TitleHome = styled(motion.h1)`
   opacity: 1;
   
 `
-const P = styled(motion.p)`
+export const P = styled(motion.p)`
 color:aliceblue;
 font-size:1.2rem;
 text-align: center;
@@ -29,13 +29,13 @@ width: 50%;
 margin-top: 20px;
 `
 
-const CorTitulo = styled.article`
+export const CorTitulo = styled.article`
 background-color:rgb(150, 110, 0, 0.5);
   width: 100%;
   text-align: center;
 `
 
-const Video = styled(motion.iframe)`
+export const Video = styled(motion.iframe)`
 margin-top: 30px;
 `
 export default function Home() {

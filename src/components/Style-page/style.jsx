@@ -52,6 +52,10 @@ export const LinkStyle = styled(Link)`
   display:flex;
   align-items:center;
   justify-content: space-around;
+  @media (max-width:600px){
+    flex-wrap: wrap;
+    height: 15vh;
+}
 `;
 export const Li = styled.li`
   font-size: 1.3rem;
@@ -63,11 +67,16 @@ export const Li = styled.li`
     color: #f9c906;
     transition: 800ms;
   }
+  
   &:active{
     scale:1.25;
     transition:600ms;
     color:#f9c906;
   }
+  @media (max-width:600px){
+   color:1px, 1px 1px;
+
+}
 `;
 export const SideBar = styled.nav`
   display: flex;
@@ -85,7 +94,9 @@ export const Lista = styled.ul`
 
 export const Logo = styled(motion.img)`
 width: 65%;
-
+@media (max-width:600px){
+    margin-left: 16%;
+}
 `
  //ESTILO PRINCIPAL DOS CARDS
 export const Galeria = styled(motion.section)`
@@ -241,9 +252,6 @@ cursor: pointer;
   transition: 500ms;
 }
 `
-
-
-
 //RODAPE, MIDIAS
 export const Rodape = styled.footer`
   z-index: 1;

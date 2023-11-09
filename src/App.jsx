@@ -20,10 +20,12 @@ const BackgroundMain = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
+  @media (max-width:600px){
+      background-position: center;
+      opacity: 0.9;
+}
+
 `;
-
-
-
 
 function App() {
   return (
