@@ -165,6 +165,12 @@ transition:800ms;
     scale:1.1;
     transition:1200ms;
   }
+  @media (max-width:600){
+    
+    &:hover{
+      scale:1;
+    }
+  }
 `;
 
 // ESTILO PERSONAGENS
