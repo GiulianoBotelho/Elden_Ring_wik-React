@@ -10,6 +10,12 @@ export const Intro = styled(motion.section)`
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
+  @media (max-width:600px){
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50%;
+    background-color: rgb(0,0,0,0.7);
+  }
 
 `;
 
@@ -27,6 +33,9 @@ font-size:1.2rem;
 text-align: center;
 width: 50%;
 margin-top: 20px;
+@media (max-width:600px){
+    width: 90%;
+}
 `
 
 export const CorTitulo = styled.article`
@@ -37,6 +46,10 @@ background-color:rgb(150, 110, 0, 0.5);
 
 export const Video = styled(motion.iframe)`
 margin-top: 30px;
+@media (max-width:600px){
+    width: 70%;
+    height: 30vh;
+}
 `
 export default function Home() {
     return (

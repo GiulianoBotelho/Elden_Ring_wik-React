@@ -54,7 +54,8 @@ export const LinkStyle = styled(Link)`
   justify-content: space-around;
   @media (max-width:600px){
     flex-wrap: wrap;
-    height: 15vh;
+    height: 20vh;
+    background-color: rgb(0,0,0,0.7)
 }
 `;
 export const Li = styled.li`
@@ -167,9 +168,6 @@ transition:800ms;
   }
   @media (max-width:600){
     
-    &:hover{
-      scale:1;
-    }
   }
 `;
 
@@ -265,7 +263,13 @@ export const Rodape = styled.footer`
   height: 6vh;
   width: 100%;
   justify-content: flex-end;
+  align-items: center;
   color: 0.2px #a08002;
+  @media (max-width:600px){
+    background-color: rgb(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+  }
 `;
 
 export const FigLogo = styled.figure`
@@ -275,4 +279,9 @@ justify-content: space-evenly;
 align-items: center;
 width: 10vw;
 cursor: pointer;
+@media (max-width:600px){
+    width: 20vw;
+
+}
+
 `
