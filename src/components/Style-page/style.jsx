@@ -55,7 +55,7 @@ export const LinkStyle = styled(Link)`
   @media (max-width:600px){
     flex-wrap: wrap;
     height: 20vh;
-    background-color: rgb(0,0,0,0.7)
+    background-color: rgb(0,0,0, 0.7);
 }
 `;
 export const Li = styled.li`
@@ -107,6 +107,10 @@ export const Galeria = styled(motion.section)`
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 15px;
+  @media (max-width: 600px){
+      background-color: rgb(0,0,0,0.7);
+      width: 100%;
+    }
 `;
 export const Imagem = styled.img`
   width: 350px;
@@ -128,6 +132,7 @@ export const Imagem = styled.img`
     0 0 2px white;
     transition: 500ms;
     }
+    
     
 `;
 export const Titulo = styled.figcaption`
@@ -219,7 +224,7 @@ justify-content: center;
 align-items: center;
 `
 export const ModalTitulo = styled(motion.p)`
-margin-left: 15%;
+  margin-left: 15%;
   color: aliceblue;
   width: 70%;
   text-align: center;
@@ -269,6 +274,7 @@ export const Rodape = styled.footer`
     background-color: rgb(0,0,0,0.7);
     display: flex;
     align-items: center;
+    height: 12vh;
   }
 `;
 
@@ -281,6 +287,7 @@ width: 10vw;
 cursor: pointer;
 @media (max-width:600px){
     width: 20vw;
+    padding-right: 10px;
 
 }
 

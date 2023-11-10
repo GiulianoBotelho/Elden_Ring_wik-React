@@ -30,6 +30,7 @@ const BackgroundMain = styled.div`
 function App() {
   return (
     <>
+    
       <BackgroundMain />
 
       <GlobalCSS />
@@ -37,9 +38,9 @@ function App() {
         <Inicio />
 
         {/* CABEÇALHO */}
-
+        
         {/* PRINCIPAL + CONTEUDO + ROTAS */}
-
+          
         <Routes>
           <Route path="/Home" element={<Home />} />
           <Route path="/Maps" element={<Maps />} />
@@ -48,7 +49,9 @@ function App() {
           <Route path="/Char" element={<Characters />} />
 
         </Routes>
+       
       </BrowserRouter>
+      
       {/* RODAPÉ */}
       {/* <Footer /> */}
       <Footer />

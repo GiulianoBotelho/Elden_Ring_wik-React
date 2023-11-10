@@ -46,6 +46,7 @@ background-color:rgb(150, 110, 0, 0.5);
 
 export const Video = styled(motion.iframe)`
 margin-top: 30px;
+
 @media (max-width:600px){
     width: 70%;
     height: 30vh;
