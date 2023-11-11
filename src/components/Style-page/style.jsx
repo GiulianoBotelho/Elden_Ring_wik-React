@@ -29,7 +29,7 @@ export const GlobalCSS = createGlobalStyle`
     border-radius: 10px;
     background-color: black;
     opacity: 0;
-    border: solid #916603;
+    border: solid #AB966F;
   }
 
   ::-webkit-scrollbar-thumb:hover {

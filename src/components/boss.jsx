@@ -18,7 +18,6 @@ import gideonImage from "../assets/boss/gideon.jpeg";
 import hoarahLouxImage from "../assets/boss/hoarah_loux.jpeg";
 import radagonImage from "../assets/boss/radagon.jpeg";
 import eldenBeastImage from "../assets/boss/elden_beast.jpeg";
-import { Link } from "react-router-dom"
 import Modal from "./modal.jsx";
 import videomargit from '../assets/cutscene/Margit.mp4'
 import videogodrick from '../assets/cutscene/godrick.mp4'
@@ -41,6 +40,7 @@ import { Galeria } from "./Style-page/style.jsx";
 import { Imagem } from "./Style-page/style.jsx";
 import { Titulo } from "./Style-page/style.jsx";
 import { Figura } from "./Style-page/style.jsx";
+import { TitleHome } from "./home.jsx";
 
 export default function Boss() {
   const [isOpen, setIsOpen] = useState(false)
@@ -123,6 +123,9 @@ export default function Boss() {
       <Modal isOpen={isOpen} setIsOpen={setIsOpen} selectedImage={selectedImage} />
       <AnimatePresence>
         <main>
+          <TitleHome initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }} >Click to preview cutscenes</TitleHome>
           <Galeria
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}

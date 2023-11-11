@@ -42,7 +42,7 @@ function App() {
         {/* PRINCIPAL + CONTEUDO + ROTAS */}
           
         <Routes>
-          <Route path="/Home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/Maps" element={<Maps />} />
           <Route path="/Gallery" element={<Boss />} />
           <Route path="/Castles" element={<Castles />} />

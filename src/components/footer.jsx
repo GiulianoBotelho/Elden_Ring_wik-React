@@ -16,26 +16,11 @@ export default function Footer() {
           <FigLogo>
             <a href="https://www.linkedin.com/in/giuliano-botelho/" target="_blank">
               <motion.img
-                initial={{ x: 0 }}
-                animate={{ rotate: [0, 300, 360] }}
-                transition={{
-                  duration: 2,
-                  ease: "easeInOut",
-                  repeat: Infinity,
-                  repeatDelay: 3,
-                }}
                 src={linkedin} alt="Logo linkedin" />
             </a>
             <a href="https://github.com/GiulianoBotelho" target="_blank"> <motion.img
-              initial={{ x: 0 }}
-              animate={{ rotate: [0, 300, 360], }}
-              transition={{
-                opacity: 1,
-                duration: 2,
-                ease: "easeInOut",
-                repeat: Infinity,
-                repeatDelay: 3,
-              }} src={github} alt="Logo github" />
+
+              src={github} alt="Logo github" />
             </a>
           </FigLogo>
         </nav>
