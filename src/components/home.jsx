@@ -68,14 +68,14 @@ height: 30vh;
 
 const Titulos = styled.h2`
 font-size: 3rem;
-background-color: black;
 color: aliceblue;
 `
 const FundoTitulo = styled.div`
 width: 100%;
-background-color: black;
+background-color: rgb(0,0,0, 0.5);
 display: flex;
 justify-content: center;
+text-align: center;
 `
 
 const HomeImg = styled(motion.img)`
@@ -103,7 +103,7 @@ export default function Home() {
                         transition={{ duration: 1 }}
                     >Welcome Tarnished</TitleHome>
                 </CorTitulo>
-
+                <FundoTitulo>
                 <P
                     initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -117,6 +117,7 @@ export default function Home() {
                     the player character is a Tarnished, one of a group of exiles from the Lands Between who are summoned back after the Shattering.
                     The player must traverse the realm to repair the Elden Ring and become the Elden Lord.
                 </P>
+                </FundoTitulo>
                 <SectionVideo>
                 <Video
                     initial={{ opacity: 0, x: -100 }}
@@ -145,18 +146,22 @@ export default function Home() {
                 <FundoTitulo>
                 <Titulos>Entering the World</Titulos>
                 </FundoTitulo>
+                <FundoTitulo>
                     <P>Elden Ring is an open-world action RPG developed by From Software. As a Tarnished, it’s your destiny to explore the Lands Between and become an Elden Lord.
-
+                    
 At the start of the game, you awaken in a tomb in the Lands Between, a place ruled by demigods following the shattering of the Elden Ring, the source of the Erdtree. The barrier between life and death no longer functions and people can no longer die.</P>
+</FundoTitulo>
                 <figure>
                  <HomeImg  initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 1.5 }}
                      src={varre} alt="npc varre" />
                 </figure>
+               <FundoTitulo>
                 <P>After emerging in the initial area of Limgrave, you encounter Varré near the first Site of Grace. He informs you that your first destination should be Castle Stormveil. The light emanating from the Site of Grace points in the direction you should follow.
 
 Resist the temptation to head straight for the castle. While this direction offers some essential upgrades, you’ll want to delay arriving at the castle for a few hours. Instead, take the time to understand how things work and strengthen your character.</P>
+</FundoTitulo>
                 <FundoTitulo>
                 <Titulos>Getting to know Melina</Titulos>
                 </FundoTitulo>
@@ -166,10 +171,11 @@ Resist the temptation to head straight for the castle. While this direction offe
                     transition={{ duration: 1, delay: 1.5 }} 
                     src={melina} alt="npc melina e tarnished" />
                 </figure>
+                <FundoTitulo>
                 <P>
                 Shortly after, you encounter Melina, who visits you near the Ruins of Gatefront. She allows you to level up. This is also the point where you obtain the horse, Torrent, which aids you in exploring the region in a faster and easier manner.
                 </P>
-
+                </FundoTitulo>
                 <FundoTitulo>
                 <Titulos>Time to explore!</Titulos>
                 </FundoTitulo>
@@ -179,9 +185,11 @@ Resist the temptation to head straight for the castle. While this direction offe
                     transition={{ duration: 1, delay: 1.5 }}
                      src={torrent} alt="cavalo torrent" />
                 </figure>
+                <FundoTitulo>
                 <P>
                 One of the biggest new features in Elden Ring is the inclusion of Torrent, a horse that the player can use for combat and exploration. Torrent proves to be a handy way to negotiate the challenging terrain of the Lands Between. The verticality of the map is facilitated by Torrent’s ability to double jump, and he can even launch himself high into the air by jumping on specific points scattered across the land. Riding Torrent greatly speeds up exploration and can lead players to normally inaccessible locations with its vertically oriented set of moves.
                 </P>
+                </FundoTitulo>
             </Intro>
         </>
     )
