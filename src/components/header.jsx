@@ -1,7 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { motion } from 'framer-motion';
+import React from "react";
 import logo from '../assets/background/ER.png'
 import { LinkStyle } from "./Style-page/style.jsx";
 import { Menu } from "./Style-page/style.jsx";

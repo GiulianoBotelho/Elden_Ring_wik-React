@@ -21,11 +21,11 @@ export const Intro = styled(motion.section)`
 
 export const TitleHome = styled(motion.h1)`
   color: aliceblue;
-  border: solid 2px #AB966F; 
-  background-color: rgb(0,0,0, 1);
+  background-color: rgb(0,0,0);
   box-shadow: 1px, 1px, 1px, 1px;
   width: 99%;
   text-align: center;
+  font-size: 1rem;
   opacity: 1;
   cursor: pointer;
 `
@@ -64,7 +64,7 @@ export default function Home() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
             >
-               
+
                 <CorTitulo>
                     <TitleHome
                         initial={{ opacity: 0, x: -100 }}

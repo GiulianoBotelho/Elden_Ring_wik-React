@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence} from "framer-motion";
 import margitImage from "../assets/boss/margit.jpeg";
 import godrickImage from "../assets//boss/godrick.jpeg";
 import rennalaImage from "../assets/boss/rennala.jpeg";
@@ -18,7 +17,7 @@ import gideonImage from "../assets/boss/gideon.jpeg";
 import hoarahLouxImage from "../assets/boss/hoarah_loux.jpeg";
 import radagonImage from "../assets/boss/radagon.jpeg";
 import eldenBeastImage from "../assets/boss/elden_beast.jpeg";
-import Modal from "./modal.jsx";
+import ModalBoss from "./modal-boss.jsx";
 import videomargit from '../assets/cutscene/Margit.mp4'
 import videogodrick from '../assets/cutscene/godrick.mp4'
 import videorennala from '../assets/cutscene/Rennala.mp4'
@@ -120,12 +119,12 @@ export default function Boss() {
 
   return (
     <>
-      <Modal isOpen={isOpen} setIsOpen={setIsOpen} selectedImage={selectedImage} />
+      <ModalBoss isOpen={isOpen} setIsOpen={setIsOpen} selectedImage={selectedImage} />
       <AnimatePresence>
         <main>
           <TitleHome initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }} >Click to preview cutscenes</TitleHome>
+            transition={{ duration: 1, delay: 2 }} >Click to preview cutscenes</TitleHome>
           <Galeria
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}

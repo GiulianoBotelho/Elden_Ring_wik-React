@@ -1,11 +1,12 @@
 import React from 'react'
-import { Div } from './Style-page/style.jsx'
-import { Botao } from './Style-page/style.jsx'
 import { Container } from './Style-page/style.jsx'
-import { Descricao } from './Style-page/style.jsx'
 import { ModalTitulo } from './Style-page/style.jsx'
-import { ImagemModal } from './Style-page/style.jsx'
-export default function Modal({ isOpen, setIsOpen, selectedImage }) {
+import { Div } from './Style-page/style.jsx'
+import { Descricao } from './Style-page/style.jsx'
+import { Botao } from './Style-page/style.jsx'
+import { Videos } from './Style-page/style.jsx'
+export default function ModalBoss({ isOpen, setIsOpen, selectedImage }) {
+
   if (!isOpen) {
     return null
   }
@@ -22,7 +23,10 @@ export default function Modal({ isOpen, setIsOpen, selectedImage }) {
           initial={{ opacity: 0, x: -1000 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-        ><ImagemModal src={selectedImage.Imagem} />
+        >
+          <Videos width="800" height="600" controls autoPlay>
+            <source src={selectedImage.video} type="video/mp4" />
+          </Videos>
           <Descricao
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -34,8 +38,7 @@ export default function Modal({ isOpen, setIsOpen, selectedImage }) {
               repeatType: 'reverse',
               duration: 3
             }}
-          >
-              {selectedImage.nome}</ModalTitulo>
+          >{selectedImage.nome}</ModalTitulo>
             {selectedImage.descricao}</Descricao>
         </Container>
 

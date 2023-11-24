@@ -1,9 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 import linkedin from '../assets/background/linkedin.png'
 import github from '../assets/background/github.png'
 import { motion } from 'framer-motion'
-import Modal from "./modal.jsx";
+import Modal from "./modal-boss.jsx";
 import { Rodape } from "./Style-page/style.jsx";
 import { FigLogo } from "./Style-page/style.jsx";
 

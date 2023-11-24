@@ -1,5 +1,5 @@
 import Background from "./assets/background/img2.jpg";
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 import Footer from "./components/footer.jsx";
 import Inicio from "./components/header.jsx";
 import { BrowserRouter, Router, Route, Routes, Link } from "react-router-dom";
@@ -30,7 +30,7 @@ const BackgroundMain = styled.div`
 function App() {
   return (
     <>
-    
+
       <BackgroundMain />
 
       <GlobalCSS />
@@ -38,9 +38,9 @@ function App() {
         <Inicio />
 
         {/* CABEÇALHO */}
-        
+
         {/* PRINCIPAL + CONTEUDO + ROTAS */}
-          
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Maps" element={<Maps />} />
@@ -49,9 +49,9 @@ function App() {
           <Route path="/Char" element={<Characters />} />
 
         </Routes>
-       
+
       </BrowserRouter>
-      
+
       {/* RODAPÉ */}
       {/* <Footer /> */}
       <Footer />

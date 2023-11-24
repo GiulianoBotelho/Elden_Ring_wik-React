@@ -1,11 +1,12 @@
-import React from 'react'
-import { Div } from './Style-page/style.jsx'
-import { Botao } from './Style-page/style.jsx'
+import React, { useState } from 'react'
 import { Container } from './Style-page/style.jsx'
-import { Descricao } from './Style-page/style.jsx'
 import { ModalTitulo } from './Style-page/style.jsx'
+import { Div } from './Style-page/style.jsx'
+import { Descricao } from './Style-page/style.jsx'
+import { Botao } from './Style-page/style.jsx'
 import { ImagemModal } from './Style-page/style.jsx'
-export default function Modal({ isOpen, setIsOpen, selectedImage }) {
+export default function ModalCastle({ isOpen, setIsOpen, selectedImage }) {
+
   if (!isOpen) {
     return null
   }
@@ -35,6 +36,7 @@ export default function Modal({ isOpen, setIsOpen, selectedImage }) {
               duration: 3
             }}
           >
+
               {selectedImage.nome}</ModalTitulo>
             {selectedImage.descricao}</Descricao>
         </Container>

@@ -43,7 +43,7 @@ export const LinkStyle = styled(Link)`
   color: inherit;
 `;
 
- export const Menu = styled.header`
+export const Menu = styled.header`
   z-index: 1;
   height: 12vh;
   width: 100%;
@@ -99,7 +99,7 @@ width: 65%;
     margin-left: 16%;
 }
 `
- //ESTILO PRINCIPAL DOS CARDS
+//ESTILO PRINCIPAL DOS CARDS
 export const Galeria = styled(motion.section)`
   display: flex;
   height: 80%;
@@ -222,14 +222,27 @@ box-shadow: 1px 1px 1px 1px;
 display: flex;
 justify-content: center;
 align-items: center;
+@media (max-width: 500px){
+  flex-direction: column;
+  width: 100%;
+  height: 80%;
+}
 `
 export const ModalTitulo = styled(motion.p)`
   margin-left: 15%;
   color: aliceblue;
   width: 70%;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 2.3rem;
   text-decoration: underline #a08002;
+`
+export const Videos = styled.video`
+
+@media (max-width:500px) {
+  width: 90%;
+  height: 70%;
+  border-radius: 10px;
+}
 `
 export const Div = styled(motion.div)`
    z-index: 1;
@@ -245,10 +258,12 @@ export const Div = styled(motion.div)`
     flex-direction: column;
 `
 export const Descricao = styled(motion.article)`
-color:aliceblue;
-text-align: center;
-display: flex;
-flex-direction: column;
+color:whitesmoke;
+font-size: 1.8rem;
+@media (max-width:500px){
+  font-size: 1.2rem;
+}
+
 `
 export const Botao = styled.button`
 margin-left: 76%;
@@ -256,10 +271,42 @@ width: 4vw;
 background-color: #a08002;
 transition: 500ms;
 cursor: pointer;
+@media (max-width:500px){
+  width: 20%;
+  margin-left: auto;
+}
 &:hover{
   background-color: #dcb106;
   transition: 500ms;
 }
+`
+
+export const ImagemModal = styled(motion.img)`
+  width: 600px;
+  height: 300px;
+  opacity: 1;
+    box-shadow:
+    0 0 20px black,
+    0 0 2px black,
+    0 0 2px black;
+    border: solid 3px black;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 25px;
+    &:hover{
+      border: solid #a08002;
+  box-shadow:
+    0 0 20px #a08000,
+    0 0 2px #947703,
+    0 0 2px white;
+    transition: 500ms;
+    }
+    @media (max-width:500px){
+      width: 90%;
+     border-radius: 10px;
+
+    }
+
 `
 //RODAPE, MIDIAS
 export const Rodape = styled.footer`
