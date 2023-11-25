@@ -137,6 +137,7 @@ export const Imagem = styled.img`
 `;
 export const Titulo = styled.figcaption`
 font-family: 'Ringbearer';
+
   font-size: 1.6rem;
   background-color: black;
   opacity: 0.9;
@@ -225,7 +226,7 @@ justify-content: center;
 align-items: center;
 @media (max-width: 500px){
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   height: 100%;
 }
 `
@@ -238,13 +239,13 @@ export const ModalTitulo = styled(motion.p)`
   text-decoration: underline #a08002;
 `
 export const Videos = styled.video`
-border: solid 1px #a08002;
+
 
 @media (max-width:500px) {
   width: 100%;
-  height: 100%;
+  height: 80%;
+border-radius: 10px;
   
-  border-radius: 10px;
 }
 
 @media (max-width:1400px){
@@ -286,7 +287,7 @@ transition: 500ms;
 cursor: pointer;
 @media (max-width:500px){
   width: 20%;
-  margin-left: auto;
+  margin-left: 70%;
 }
 &:hover{
   background-color: #dcb106;
