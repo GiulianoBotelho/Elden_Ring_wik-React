@@ -212,10 +212,11 @@ export const FigChar = styled.figure`
 
 export const Container = styled(motion.article)`
 text-align: center;
+
 border-radius:6px;
 background-color: rgb(0,0,0, 0.5);
 width: 80%;
-height: 60%;
+height: 90%;
 overflow: auto;
 border: solid 1px #a08002;
 box-shadow: 1px 1px 1px 1px;
@@ -225,7 +226,7 @@ align-items: center;
 @media (max-width: 500px){
   flex-direction: column;
   width: 100%;
-  height: 80%;
+  height: 100%;
 }
 `
 export const ModalTitulo = styled(motion.p)`
@@ -240,9 +241,13 @@ export const Videos = styled.video`
 border: solid 1px #a08002;
 
 @media (max-width:500px) {
-  width: 90%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
+}
+
+@media (max-width:1400px){
+  width: 50%;
 }
 `
 export const Div = styled(motion.div)`
@@ -260,9 +265,15 @@ export const Div = styled(motion.div)`
 `
 export const Descricao = styled(motion.article)`
 color:whitesmoke;
-font-size: 1.8rem;
+font-size: 1.2rem;
 @media (max-width:500px){
   font-size: 1.2rem;
+}
+@media (max-width:800px){
+  font-size: 0.8rem;
+}
+@media (max-width:1400px){
+ font-size: 1.3rem;
 }
 
 `
