@@ -137,7 +137,6 @@ export const Imagem = styled.img`
 `;
 export const Titulo = styled.figcaption`
 font-family: 'Ringbearer';
-border: solid green;
   font-size: 1.6rem;
   background-color: black;
   opacity: 0.9;
