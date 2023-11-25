@@ -35,7 +35,6 @@ export const TitleHome = styled(motion.h1)`
   cursor: pointer;
 `
 export const P = styled(motion.p)`
-text-decoration: underline #a08002;
 color:whitesmoke;
 font-size:1.5rem;
 text-align: center;
