@@ -137,6 +137,7 @@ export const Imagem = styled.img`
 `;
 export const Titulo = styled.figcaption`
 font-family: 'Ringbearer';
+border: solid green;
   font-size: 1.6rem;
   background-color: black;
   opacity: 0.9;
@@ -243,6 +244,7 @@ border: solid 1px #a08002;
 @media (max-width:500px) {
   width: 100%;
   height: 100%;
+  
   border-radius: 10px;
 }
 

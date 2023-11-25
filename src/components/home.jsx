@@ -49,6 +49,9 @@ margin-top: 20px;
 export const CorTitulo = styled.article`
   width: 100%;
   text-align: center;
+  @media (max-width:500px){
+    width: 80%;
+  }
 `
 const SectionVideo = styled.section`
 display: flex;
@@ -73,6 +76,9 @@ border: solid 1px #a08002;
 const Titulos = styled(motion.h2)`
 font-size: 3rem;
 color: #a08002;
+@media (max-width:500px){
+    width: 80%;
+  }
 `
 const FundoTitulo = styled.div`
 width: 100%;
@@ -88,9 +94,14 @@ const HomeImg = styled(motion.img)`
  border-radius: 10px;
  border: solid #a08002;
  @media (max-width:500px){
-    width: 100%;
+    width: 90%;
     height: 20%;
  }
+`
+const FigHomeImg = styled.figure`
+display: flex;
+align-items: center;
+justify-content: center;
 `
 export default function Home() {
     return (
@@ -167,12 +178,12 @@ export default function Home() {
                     
 At the start of the game, you awaken in a tomb in the Lands Between, a place ruled by demigods following the shattering of the Elden Ring, the source of the Erdtree. The barrier between life and death no longer functions and people can no longer die.</P>
 </FundoTitulo>
-                <figure>
+                <FigHomeImg>
                  <HomeImg  initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 1.5 }}
                      src={varre} alt="npc varre" />
-                </figure>
+                </FigHomeImg>
                <FundoTitulo>
                 <P>After emerging in the initial area of Limgrave, you encounter Varré near the first Site of Grace. He informs you that your first destination should be Castle Stormveil. The light emanating from the Site of Grace points in the direction you should follow.
 
@@ -187,12 +198,12 @@ Resist the temptation to head straight for the castle. While this direction offe
                          duration: 3 }}
                 >Getting to know Melina</Titulos>
                 </FundoTitulo>
-                <figure>
+                <FigHomeImg>
                     <HomeImg  initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 1.5 }} 
                     src={melina} alt="npc melina e tarnished" />
-                </figure>
+                </FigHomeImg>
                 <FundoTitulo>
                 <P>
                 Shortly after, you encounter Melina, who visits you near the Ruins of Gatefront. She allows you to level up. This is also the point where you obtain the horse, Torrent, which aids you in exploring the region in a faster and easier manner.
@@ -207,12 +218,12 @@ Resist the temptation to head straight for the castle. While this direction offe
                          duration: 3 }}
                 >Time to explore!</Titulos>
                 </FundoTitulo>
-                <figure>
+                <FigHomeImg>
                     <HomeImg  initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 1.5 }}
                      src={torrent} alt="cavalo torrent" />
-                </figure>
+                </FigHomeImg>
                 <FundoTitulo>
                 <P>
                 One of the biggest new features in Elden Ring is the inclusion of Torrent, a horse that the player can use for combat and exploration. Torrent proves to be a handy way to negotiate the challenging terrain of the Lands Between. The verticality of the map is facilitated by Torrent’s ability to double jump, and he can even launch himself high into the air by jumping on specific points scattered across the land. Riding Torrent greatly speeds up exploration and can lead players to normally inaccessible locations with its vertically oriented set of moves.
