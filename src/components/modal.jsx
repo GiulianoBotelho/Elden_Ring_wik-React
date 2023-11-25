@@ -38,7 +38,6 @@ export default function Modal({ isOpen, setIsOpen, selectedImage }) {
               {selectedImage.nome}</ModalTitulo>
             {selectedImage.descricao}</Descricao>
         </Container>
-
       </Div>
     </>
   )

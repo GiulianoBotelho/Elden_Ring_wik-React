@@ -237,6 +237,7 @@ export const ModalTitulo = styled(motion.p)`
   text-decoration: underline #a08002;
 `
 export const Videos = styled.video`
+border: solid 1px #a08002;
 
 @media (max-width:500px) {
   width: 90%;

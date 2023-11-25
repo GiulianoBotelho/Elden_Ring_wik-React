@@ -87,7 +87,6 @@ export default function ModalChar({ isOpen, setIsOpen, selectedImage }) {
                             {selectedImage.nome}</ModalTitulo>
                         {selectedImage.descricao}</Descricao>
                 </Container>
-
             </Div>
         </>
     )
